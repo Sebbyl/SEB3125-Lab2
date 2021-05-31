@@ -50,11 +50,26 @@ function cInfoSelect(){
 }
 function productLoad(){
     var savedArray = JSON.parse(window.localStorage.getItem("info"))
-    //console.log(savedArray)
+    console.log(savedArray)
     if (savedArray !== []){
         for(var i = 0; i<savedArray.length;i++){
          var cur = document.getElementById(savedArray[i])
-         cur.style.display = "none"
+          if (savedArray[i] == "organic"){
+             console.log("test")
+             var lactoseIntolerant = document.getElementById("lactoseIntolerant")
+             var glutenFree = document.getElementById("glutenFree")
+             var vegetarian = document.getElementById("vegetarian")
+             lactoseIntolerant.style.display = "none"
+             glutenFree.style.display = "none"
+             vegetarian.style.display = "none"
+
+          }
+         else{
+            
+
+            cur.style.display = "none"
+        }
+         
         }
     }
     // var p = document.getElementById(savedArray[0])
@@ -107,12 +122,12 @@ function cartLoad(){
             cur = "Egg"
             price = 5
         }
-        else if (item == "peanut"){
-            cur = "Peanuts"
+        else if (item == "organicApple"){
+            cur = "Organic Appls"
             price = 13
         }
-        else if (item == "cashew"){
-            cur = "Cashews"
+        else if (item == "organicOrange"){
+            cur = "Organic Oranges"
             price = 14
         }
         else if (item == "bread"){
