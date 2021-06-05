@@ -1,6 +1,6 @@
-var client = document.getElementById("client")
-var product = document.getElementById("product")
-var cart = document.getElementById("cart")
+// var client = document.getElementById("client")
+// var product = document.getElementById("product")
+// var cart = document.getElementById("cart")
 
 // var steak = {name: "Tenderloin Steak", price: 70, id: "tenderloin"}
 // var milk = {name: "Milk", price: 10, id: "milk"}
@@ -152,4 +152,13 @@ function cartLoad(){
     totalPrice.innerHTML = "Total Price: $"+ totPrice 
     // console.log(productDiv)
     // console.log(savedArray)
+}
+
+function checkSelect(){
+    select = document.getElementById("selection").value
+    console.log(select)
+    if (select !== "pickup" && select !== "delivery"){
+        //console.log(select)
+        alert("Please select your order type (Pickup or Delivery)")
+    }
 }

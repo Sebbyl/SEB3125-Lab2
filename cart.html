@@ -10,11 +10,17 @@
 </head>
 <body onload="cartLoad()">
     <div class = "navBar">
-        <button id = "client" onclick="navClient()">client</button>
+        <div>Client</div>
+        <div >Product</div>
+        <div id = "active">Cart</div>
+
+        
+        <!-- <button id = "client" onclick="navClient()">client</button>
         <button id = "products" onclick="navProduct()">Products</button>
-        <button id = "cart" onclick="navCart()">Cart</button>
+        <button id = "cart" onclick="navCart()">Cart</button> -->
     </div>
     <div class = "format">
+        <h1 id = title>Sebastiens Premium Groceries</h1>
         <h3>Your Cart</h3>
         <p>Here are the items you selected:</p>
             <div >
@@ -23,6 +29,14 @@
                 </ul>
             </div>
             <p id = "totalPrice">Total Price: </p><br/><br/>
+            <p id = "orderType">Please select if you want pickup or delivery for your order:</p>
+            <select id = "selection" style = "width: 150px; height:30px">
+                <option value = " "></option>
+                <option value = "pickup">Pickup</option>
+                <option value = "delivery">Delivery</option>
+            </select><br/><br/>
+            
+            <button onclick="checkSelect()">Confirm Order</button><br/><br/>
             <button id = prevPage onclick="navProduct()">Previous Page</button>
     </div>
     <footer>
