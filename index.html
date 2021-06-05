@@ -10,20 +10,15 @@
 </head>
 <body onload = "cInfoIsChecked()">
     <div class = "navBar">
-        <div id = "active">Client</div>
-        <div>Product</div>
-        <div>Cart</div>
-
-        <!-- <button id = "client" onclick="navClient()">client</button>
+        <button id = "client" onclick="navClient()">client</button>
         <button id = "products" onclick="navProduct()">Products</button>
-        <button id = "cart" onclick="navCart()">Cart</button> -->
+        <button id = "cart" onclick="navCart()">Cart</button>
     </div>
     
     <div class = "format">
-        <h1 id = title>Sebastiens Premium Groceries</h1>
+        <h1>Sebastiens Premium Groceries</h1>
         <h3>Client Information</h3>
-        <p>Do you have any product preferences? </p>
-        
+        <p>Would you like any of the following types of food to be removed from the product list?</p>
         <input type = "checkbox" id = "vegetarian" class = "cInfo" value = "vegetarian">
         <label>Vegetarian</label><br/>
         <input type = "checkbox" id = "glutenFree" class = "cInfo" value="glutenFree">
@@ -33,7 +28,6 @@
         <input type = "checkbox" id = "organic" class = "cInfo" value="organic">
         <label>Organic Products</label><br/><br/>
         <button id = nextPage onclick="cInfoSelect()">Next Page</button>
-    
     </div>
     <footer>
         <p>Website designed by: Sebstien Leduc</p>
